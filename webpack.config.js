@@ -15,7 +15,11 @@ module.exports = {
             test: /\.tsx?$/,
             use: "ts-loader",
             exclude: /node_modules/,
-        }],
+        }, {
+            test: /\.js$/,
+            enforce: "pre",
+            use: ["source-map-loader"],
+        }, ],
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
