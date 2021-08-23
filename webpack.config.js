@@ -1,5 +1,5 @@
-const transformer = require('ts-reflection/transformer').default;
 const path = require('path');
+const transformer = require('ts-reflection/transformer').default;
 
 module.exports = {
     mode: 'development',
@@ -29,7 +29,7 @@ module.exports = {
         }],
     },
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
+        static: path.join(__dirname, 'dist'),
         compress: true,
         port: 9000,
     },
